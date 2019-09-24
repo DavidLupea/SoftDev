@@ -1,4 +1,4 @@
-#Peihua Huang
+#Peihua Huang, David Lupea
 #SoftDev1 pd2
 #K10 -- Occupations Flask app
 #2019-09-19
