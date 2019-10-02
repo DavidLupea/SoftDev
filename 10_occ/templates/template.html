@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}}</title>
+    <h1>{{heading}}</h1>
+		<h2>{{head2}}</h2>
+	</head>
+	<body>
+    {{team}}
+    <br>
+    <p>Random job: {{rand_job}}</p>
+    <br>
+    <table>
+      <tr>
+        <th>{{jobs}}</th>
+        <th>{{percent}}</th>
+      </tr>
+      {% for key,value in dict %}
+        <tr>
+          <td>{{key}}</td>
+          <td>{{value}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+	</body>
+</html>
