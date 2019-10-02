@@ -11,15 +11,10 @@ def hello_world():
     print(__name__) #where will this go?
     return "No hablo queso!"
 
-@app.route("/cooldude")
+@app.route("/test")
 def cooldude():
     print(__name__)
-    return "You're a cool dude!!"
-
-@app.route("/pizzadog")
-def pizzadog():
-    print(__name__)
-    return "Come here pizza dog!"
+    return "Wow it worked!!"
 
 @app.route("/milkbeforecereal")
 def milkbeforecereal():
