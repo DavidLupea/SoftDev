@@ -4,17 +4,15 @@
     <title> Login! </title>
   </head>
   <body>
-    <h1>Team  StraitOuttaSoftDev</h1>
-    <h1>David Lupea and Devin Lin </h1>
+    <h2>Team  StraitOuttaSoftDev</h2>
+    <h2>David Lupea and Devin Lin </h2>
     {%if error%}
       {{error}}
     {%endif%}
     <h6> You are logged out. Please log in! </h6>
     <form action = "/auth">
-      User:
-      <input type = "text" name = "user"> <br>
-      Pass:
-      <input type="password" name="pass"> <br>
+      User:<input type = "text" name = "user"> <br>
+      Pass:<input type="password" name="pass"> <br>
       <input type = "submit" name = "submit"> <br>
     </form>
   </body>
