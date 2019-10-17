@@ -1,0 +1,12 @@
+{% extends "parent.html" %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block header %} You Are Now Logged In Welcome{% endblock %}
+
+{% block body %}
+<h5>Welcome to our home page! Enjoy your stay!</h3>
+<form action="/logout" method="GET">
+  <input type="submit" value="log out">
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <body>
+        {% block header %}{% endblock %}
+        <hr>
+        {% block body %}{% endblock %}
+        <hr>
+        {% block footer %}
+            <footer>
+                <h5>Page created by ©Team StraitOuttaSoftDev</h5>
+                <ul>
+                    <li>David Lupea</li>
+                    <li>Devin Lin</li>
+                </ul>
+                <h6>Finished on Oct 6rd 2019</h6>
+            </footer>
+        {% endblock %}
+    </body>
+</html>
