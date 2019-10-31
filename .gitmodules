@@ -1,0 +1,3 @@
+[submodule "p00_blog"]
+	path = p00_blog
+	url = https://github.com/aolteanu00/blog.git
