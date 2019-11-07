@@ -7,120 +7,58 @@
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js"></script>
 </head>
 <body style = "padding: 20px">
+    <h1 class ="text-center"> Hello! There are a bunch of things you can do with foundation! </h1>
+    <p></p>
+    <h4 class ="text-center"> This is a really cool looking table that Foundation lets you insert </h4>
+    <table>
+        <thead>
+            <tr>
+                <th width="10px">Thinboi</th>
+                <th width="500">t h i c c   b o i</th>
+                <th width="30">smol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>123456</td>
+                <td>Wow such content glad that I have a lot of table space to put it into</td>
+                <td>morestuff.exe</td>
+            </tr>
+            <tr>
+                <td>4567890</td>
+                <td>Wow such content glad that I have a lot of table space to put it into</td>
+                <td>wowsuchcool.jpeg</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-      <div class="title-bar-title">Menu</div>
+    <h4 class="text-center"> Foundation also lets you put videos from online into your page </h4>
+    <div class="responsive-embed">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLsyvDWwjkTqtOmqAiTzzfHspTAztB-udL" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
     </div>
 
-    <div class="top-bar" id="responsive-menu">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Site Title</li>
-          <li><a href="#0">One</a></li>
-          <li><a href="#0">Two</a></li>
-          <li><a href="#0">Three</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><input type="search" placeholder="Search"></li>
-          <li><button type="button" class="button">Search</button></li>
-        </ul>
-      </div>
+    <p></p>
+
+    <h4 class="text-center"> Sorry for that. Are you still with me? Foundation also allows you to put progress bars in your pages! </h4>
+    <div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+        <div class="progress-meter" style="width: 70%"></div>
     </div>
 
+    <h4 class="text-center"> Okay one more thing I promise. Foundation lets you format pages into your website. Isn't that dandy?</h4>
+    <nav aria-label="Pagination">
+        <ul class="pagination">
+            <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+            <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+            <li><a href="#" aria-label="Page 2">2</a></li>
+            <li><a href="#" aria-label="Page 3">3</a></li>
+            <li><a href="#" aria-label="Page 4">4</a></li>
+            <li class="ellipsis" aria-hidden="true"></li>
+            <li><a href="#" aria-label="Page 12">12</a></li>
+            <li><a href="#" aria-label="Page 13">13</a></li>
+            <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+        </ul>
+    </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <form>
-      <div class="row">
-        <div class="large-12 columns">
-            <label>Input Label
-                <input type="text" placeholder="large-12.columns" />
-            </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-4 columns">
-          <label>Input Label
-            <input type="text" placeholder="large-4.columns" />
-          </label>
-        </div>
-        <div class="large-4 columns">
-          <label>Input Label
-            <input type="text" placeholder="large-4.columns" />
-          </label>
-        </div>
-        <div class="large-4 columns">
-          <div class="row collapse">
-            <label>Input Label</label>
-            <div class="small-9 columns">
-              <input type="text" placeholder="small-9.columns" />
-            </div>
-            <div class="small-3 columns">
-              <span class="postfix">.com</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Select Box
-            <select>
-              <option value="husker">Husker</option>
-              <option value="starbuck">Starbuck</option>
-              <option value="hotdog">Hot Dog</option>
-              <option value="apollo">Apollo</option>
-            </select>
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-6 columns">
-          <label>Choose Your Favorite</label>
-          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
-        </div>
-        <div class="large-6 columns">
-          <label>Check these out</label>
-          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Textarea Label
-            <textarea placeholder="small-12.columns"></textarea>
-          </label>
-        </div>
-      </div>
-    </form>
-
-
-    <div class="switch">
-        <input class="switch-input" id="exampleSwitch" type="checkbox" name="myFirstSwitch">
-        <label class="switch-paddle" for="exampleSwitch">
-        <span class="show-for-sr">Switch</span>
-        </label>
-    </div> 
-    <div class="callout" data-closable>
-        <button class="close-button" aria-label="Close alert" type="button" data-close>
-        <span aria-hidden="true">&times;</span>
-        </button>This is a button!</p>
-    </div>   
+    <h2> Okay now that you've made it to the end, here's a cookie for your efforts: 🍪 </h2>
 </body>
 </html>
