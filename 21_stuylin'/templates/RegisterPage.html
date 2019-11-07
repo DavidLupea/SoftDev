@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Register Page {% endblock %}
+{% block body %}
+
+<h1> Register Page </h1>
+{% if m %}
+<h5>&#9888; {{m}}</h5>
+{% endif %}
+  <form action = "/registerHelper" method = "GET">
+    Username:<br>
+    <input class = "input" type="text" name="username"><br>
+    Password:<br>
+    <input class = "input" type="password" name="password"><br>
+    Repeat Password:<br>
+    <input class = "input" type="password" name="repeat"><br><br>
+
+    <input class = "button" type="submit" value="Create Account">
+  </form>
+  <br>
+  <form action = "/">
+    <input class = "button" type="submit" value = "Back to Login Page">
+  </form>
+{% endblock %}
