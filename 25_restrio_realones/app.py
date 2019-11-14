@@ -1,4 +1,4 @@
-#David Lupea
+#David Lupea and Jionghao Wu
 #SoftDev1 pd2
 #K24 -- A RESTful Journey Skyward
 #2019-11-13
@@ -31,7 +31,14 @@ def root():
     img_1 = data_3["primaryImageSmall"]
     # artist = data_3["constituents"][0]['name']
 
-    return render_template("index.html",vals = data_1, img = img_1)
+    page_4 = urlopen("http://quotes.rest/qod.json")
+    response_4 = page_4.read()
+    data_4 = json.loads(response_4)
+    data_4 = data_4["contents"]
+    data_4 = data_4["quotes"]
+    data_4 = data_4[0]
+
+    return render_template("index.html",vals = data_1, img = img_1, quote = data_4['quote'],author = data_4['author'])
 
 
 
