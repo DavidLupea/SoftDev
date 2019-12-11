@@ -1,0 +1,101 @@
+<!-- This file displays a list of all industries
+ex. Locksmith, Car Wash, etc. in the form of a
+dropdown menu.
+When the user selects an industry, the
+user is redirected to business_list route, which loads
+business_list.html, a list of all businesses of that type.
+</thead>
+ -->
+<!-- This returns alist of businesses of
+ the type provided by user input in business_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <title>Businesses</title>
+</head>
+
+<nav class="navbar sticky-top navbar-light bg-light navbar-expand-sm">
+  <a class="navbar-brand" href="welcome">Friday Cat Damage</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/traffic"> Traffic </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/weather">Weather</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/business_form">Businesses</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/auth">Log out</a>
+    </li>
+  </ul>
+</nav>
+
+<body style="background: url('https://cdn.wallpapersafari.com/81/18/WewaSt.jpg') no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div class="container">
+    <div class="card border-10 shadow my-5">
+
+      <div class="card-body p-5">
+        {% if error %}
+        <p class="text-danger"> {{error}} </p>
+        {% endif %}
+        <form action="/business_list">
+          <input placeholder='Business type' class="form-control form-control-lg" type='text' name='industry' data-provide='typeahead'>
+          <br>
+          <input type="submit" class="btn btn-outline-primary" value="Submit">
+          <br>
+        </form>
+        <h3> On this page, you can search for types of businesses in your area.
+          <br>
+          Stuck? Try "wineries" and watch the autocomplete do its thing!
+        </h3>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+          var industry = ['Agricultural Products', 'Farms', 'Veterinarians Dvm Vmd Public Health', 'Animal Shelters', 'Pet Services', 'Hunting & Fishing Preserves', 'Wildlife Conservation', 'Mining Companies', 'Construction Building Contractors',
+            'Buildings Factory', 'Flooring', 'Preserves (Manufacturers)', 'Wineries', 'Publishers', 'Automobile Manufacturers', 'Manufacturers', 'Train Stations', 'Airport Transportation Service', 'Ambulance Service', 'Car Service',
+            'Rescue Squads', 'Transportation Services', 'Taxis', 'Bus Lines', 'Buses Charter & Rental', 'Delivery Service', 'Moving Services', 'Post Offices', 'Ferry Terminals', 'Marinas', 'Boat Launching', 'Airline Companies', 'Airports',
+            'Tourist Information', 'Travel Agents', 'Scales Public', 'Telecommunications Services', 'Telephone Companies', 'Electric Companies', 'Buses-New & Used (Wholesale)', 'Recreational Vehicles Wholesale',
+            'Snowmobiles Wholesale & Distributors', 'Curtains Shower & Bath Wholesale', 'Construction Materials NEC (Wholesale)', 'Copiers', 'Office Equipment (Wholesale)', 'Medical Supplies', 'Security Control Equipment & Systems-Wholesale',
+            'Beauty Salons-Equipment & Supplies (Wholesale)', 'Recycling Centers (Wholesale)', 'Pharmaceutical Products Wholesale', 'Butchering (Wholesale)', 'Chemicals (Wholesale)', 'Cigar Cigarette & Tobacco Dealers-Wholesale', 'Windows',
+            'Electric Equipment & Supplies Retail', 'Home Centers', 'Paint Stores', 'Hardware Stores', 'Garden Centers', 'Department Stores', 'Retail Shops', 'Wholesale Clubs', 'Variety Stores', 'Food Markets', 'Convenience Stores',
+            'Grocery Stores', 'Grocers Health Foods', 'Seafood Markets', 'Farm Markets', 'Bakers Cake & Pie', 'Doughnuts', 'Food Specialties Retail', 'Miscellaneous Food Stores', '(All) Auto Dealers', 'Truck Dealers-New', 'Vans Dealers',
+            'Automobile Accessories', 'Gas Stations', 'Truck Stops & Plazas', 'Electric Charging Station', 'Boat Equipment & Supplies', 'Boat Dealers', 'Yachts', 'All Terrain Vehicles', 'Motorcycle Dealers', "Children's Clothing",
+            'Clothing Retail', 'Rubber & Plastic Footwear Retail', 'Sportswear', 'Tailors', 'Furniture Stores', 'Chinaware & Glassware Retail', 'Lighting Stores', 'Kitchen Accessories', 'Grills Barbecue', 'Electronic Equipment & Supplies Retail',
+            'Marine Electronic Equipment & Supplies Retail', 'Dvd Sales & Service', 'Computer Software', 'Computer Parts & Supplies', 'Musical Instruments', 'Ice Cream Parlors', 'Foods Carry Out', '(All) Restaurants', 'Delicatessens', 'Caterers',
+            'Cafeterias', 'Cafes', 'Appetizers & Snacks Etc', 'Subs & Sandwiches', 'Banquet Rooms', 'Theatres Dinner', 'Coffee Shops', 'Tea Rooms', 'Juice Bars', 'Restaurants Cyber Cafes', 'Bars', 'Discotheques', 'Cocktail Lounges', 'Pubs',
+            'Comedy Clubs', 'Karaoke Clubs', 'Pharmacies', 'Wines Retail', 'Flea Markets', 'Pawn Shops', 'Bicycle Racks & Security Systems', 'Book Stores', 'Jewelers', 'Hobby & Model Shops', 'Toy Stores', 'Gift Shops', 'Florists', 'Opticians',
+            'Cell Phones', 'Pet Supplies', 'Factory Outlets', 'Wedding Supplies & Services', 'Art Galleries & Dealers', 'Monuments', 'Banks', 'Currency Exchanges', 'Investments', 'Stock Exchanges', 'Financial Planners',
+            'Government Pension Health/Welfare Funds', '(All) Insurance', 'Shopping Centers & Malls', 'Condominiums', 'Apartments', 'Townhouses', 'Real Estate Agents', 'Housing Rental', 'Real Estate Developers', 'Hotels & Motels',
+            'Cottages & Cabins', 'Bed & Breakfasts', 'Chalet & Cabin Rentals', 'Skiing Centers & Resorts', 'Resorts', 'Villas', 'Hostels', 'Adventure Games & Activities', 'Campgrounds', 'Dry Cleaners', 'Laundry & Garment Services NEC',
+            'Photography', 'Manicurists', 'Barbers', 'Funeral Homes', 'Tax Return Preparation & Filing', 'Advertising Marketing', 'Distribution Services', 'House Cleaning', 'Toilets Portable', 'Misc Equipment Rental & Leasing', 'Computer Services',
+            'Traffic Control Services', 'News Service', 'Photo Laboratories Commercial', 'Convention & Meeting Facilities & Service', 'Business Services NEC', 'Auto Rental', 'Parking Garages', 'Auto Body Shops', 'Tire Service',
+            'Glass Replacement Shops', 'Truck Repair & Service', 'Car Washes', 'Appliances Household Major Repairing', 'Motorcycle Repair & Service', 'Repair Shops & Related Services NEC', 'Movie Theatres', 'Movie Theatres (drive-Ins)',
+            'Video & DVD Rental', 'Theatres Live', 'Concert Venues', 'Entertainment Bureaus', 'Bowling Centers', 'Stadiums Arenas & Athletic Fields', 'Race Tracks', 'Horse Racing', 'Health Clubs & Gyms', 'Golf Courses-Public Or Private', 'Casinos',
+            'Arcades', 'Amusement Places', 'Water Parks', 'Amusement Parks', 'Recreation Centers', 'Hockey Clubs', 'Flying Clubs', 'Beach & Cabana Clubs', 'Sports Recreational', 'Skating Rinks', 'Bicycles Renting',
+            'Baths Bath Houses Spas & Saunas', 'Billiard Parlors', 'Fairgrounds', 'Historical Places', 'Parks', 'Picnic Grounds', 'Horseback Riding', 'Swimming Pools Public', 'Tennis Courts Public', 'Squash Courts Public', '(All) Doctors',
+            '(All) Dentists', 'Retirement Communities & Homes', 'Homes Personal Care Facility', 'Nursing & Personal Care NEC', 'Hospitals', 'Emergency Medical & Surgical Service', 'Specialty Hospitals Except Psychiatric', 'Blood Banks & Centers',
+            'Legal Services', 'Schools (K-12)', 'Schools With Special Academic Education', 'Technical Schools', 'Colleges & Universities', 'Junior Colleges & Technical Institutes', 'Libraries', 'Vocational Schools NEC', 'Driving Instruction',
+            'Language Schools', 'Art Schools', 'Culinary Schools', 'Hiking Backpacking & Mountaineering Service', 'Sports Tutoring', 'Soup Kitchens', 'Day Care', 'Preschools', 'Residential Care Homes', 'Museums', 'Planetariums', 'Cultural Centres',
+            'National Monuments', 'Zoos', 'Arboretums', 'Aquariums Public', 'Motoring Organisations', 'Clubs', 'Community Organizations', 'Church Organizations', '(All) Places Of Worship', 'Synagogues', 'Mosques', 'Ashrams', 'Dance Clubs',
+            'Engineering', 'Research Labs', 'Laboratories Agricultural', 'Observatories', 'Industrial Developments', 'Beach', 'Cave', 'Forest', 'Ridge', 'Valley', 'Bay', 'Rapids', 'Reservoir', 'Swamp', 'Bridge', 'Building', 'Dam', 'Tower',
+            'Federal Government Executive Offices', 'State Government Executive Offices', 'City Government Executive Offices', 'Federal Government General Offices', 'State Government General Offices', 'Government Offices Native American',
+            'Federal Government Correctional Institutions', 'Fire & Rescue', 'Port Services', 'Transportation Authorities', 'City Government Regulation/Adm Comms/Utilities', 'Military Bases', 'Federal Government International Affairs',
+            'Tourist Attractions'
+          ];
+          $('[name=industry]')
+            .typeahead({
+              minLength: 2,
+              source: industry
+            });
+        </script>
+</body>
+
+</html>
