@@ -1,0 +1,81 @@
+Team Devlog!! Super Exciting
+alexT -- 2019-10-20 6:40pm
+  Finished component list and interaction page. We will have one python file which contains necessary functions, sitepaths, and db interaction.
+  The other file will create the database and be run only once so that our database is consistent. We will have login, register, welcome,
+  createBlog, blog, search, and showall html files. Each will be rendered by a different sitepath. At the moment, we plan on allowing Each
+  user a single blog which is automatically displayed when they enter. in the future, we may adapt our code to incorporate multiple blogs for
+  each user.
+
+
+rahmanM -- 2019-10-20 10:54
+Yesterday was pretty productive, given it was our first day of serious work. I
+finished a diagram for the database structure. I also laid some rudimentary
+boilerplate code and a basic registration html and python.
+
+alexO -- 2019-10-22 9:15
+recreated table which stores blogs. the new values are username, blogid, blog title, and blog content.
+reasoning behind the change is ease of coding, as working with simple integer values to identify
+a specific blog is far simpler than using timestamps. furthermore, it was decided a blog title column
+was necessary.
+
+also began creating functions to manipulate and retrieve data from the database. examples include
+fetchUsername, fetchBlog, fetchAllBlogs, etc...
+
+alexT -- 2019-10-22 9:13pm
+  Created basic.html for the use of flash inheritance in the future
+  Created login.html: basic login page w/user and pass and login button. Also has a link to registration page
+  Created welcome.html: basic welcome page to greet the user after they've been logged in
+
+rahmanM -- 2019-10-22 23:33
+A lot of good basework today. I fully fleshed out the login logout mechanics and got
+a bunch of people to generate data and help me test it out.
+
+lupeaD -- 2019-10-22 9:09
+Created a flow chart that illustrates the user's experience on the site.
+Started working on pages that allow additions to the database
+
+alexT -- 2019-10-23 9:25pm
+Created createPost.html, results.html, search.html
+form in createPost which sends post title and content to welcome.html
+form in search and in results which send input to /results to be searched for and sent back to results.html
+cleaned up existing html
+all html files ready for implementation of jinja
+added sitemaps to make the website navigable in what we have so far
+
+lupeaD -- 2019-10-23 9:55pm
+Enabled web page to display whether user or password are incorrect on login.
+Once you successfully register, automatically redirects you to your new home page rather than making you log in again
+
+alexO -- 2019-10-23 11:45pm
+Created and finished previous requested blog data retrival functions
+
+alexO -- 2019-10-23 12:11pm
+Discovered errors in delete functions and fixed them
+
+alexT -- 2019-10-24 9:53pm
+created branch addingJinja and htmlTest.py to test html files without effecting other code
+cleaned up html code using <fieldset>. **Note that there is still no CSS fieldsets are html**
+Created editPost.html: Very similar to createPost with a few minor changes
+added and tested jinja functionality in welcome, results, and editPost
+welcome gets a username variable and a posts variable. user is a string, posts is a dict
+results is same as welcome. Both loop through the dict displaying all of the posts sent to them in an organized fashion
+editPost gets the post content and postTitle so that it can be sufficiently edited.
+
+alexT -- 2019-10-26 9:37pm
+created search branch to work on search mechanism inside of "/results"
+completed a basic search which searches through the titles of all posts and
+sends a dict of posts whose titles contain the search input.
+We will have to decide if we want to include post content in search.
+results takes in the results dict and lists posts with a view button under each
+
+alexO -- 2019-10-27 6:34pm
+coded viewBlog under the viewBlog route in app.py
+website is essentially finished as this was the last segment of code needed to
+have been completed
+
+alexT -- 2019-10-28 3:12am
+implemented user ability to have multiple blogs and to edit blogs
+
+alexO -- 2019--10-28 3:12am
+implemented user ability to have multiple blogs and to edit blogs alongside alexT
+polished code

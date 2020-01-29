@@ -1,0 +1,22 @@
+{% block head %}
+  <title> Quackheads Blog </title>
+  <h1> Quackheads Blog </h1>
+{% endblock %}
+
+{% block content %}
+<a href="/welcome"><center>Back to homepage<center></a>
+<br>
+<a href="/search">Search Blogs</a>
+
+  <form action = "/viewBlog">
+    <br>
+          {% for blogTitle in blogTitles%}
+          <input type="submit" name="blogName" value="{{blogTitle}}"{{blogTitle}}></input>
+          <br><br>
+          {% endfor %}
+
+  </form>
+  {% endblock %}
+
+  {% block footer %}
+  {% endblock %}

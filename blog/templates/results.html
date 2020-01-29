@@ -1,0 +1,37 @@
+{% block head %}
+<title> Quackheads Blog </title>
+<h1> Quackheads Blog </h1>
+{% endblock %}
+
+{% block content %}
+<form action="/results">
+  <fieldset>
+    <legend> Search </legend>
+    <br>
+    <label> Enter Keywords: </label>
+    <input type="text" name="searchInput" placeholder="Keyword" />
+    <input type="submit" id="submit" value="Search" />
+  </fieldset>
+</form>
+
+<fieldset>
+  <legend> Results: </legend>
+  <br>
+  <form action="/viewBlog">
+    {% for post in results %}
+    <fieldset>
+      <h4> {{post[1]}} &nbsp&nbsp&nbsp|| posted by {{post[0]}}</h4>
+      <pre> {{post[2]}} </pre>
+      <button type="submit" name="blogName" value="{{post[3]}}">View</button>
+    </fieldset>
+    <br>
+    {% endfor %}
+  </form>
+</fieldset>
+{% endblock %}
+
+{% block footer %}
+<a href="/welcome">Back to homepage</a>
+<br>
+<a href="/showall">Show All Blogs</a>
+{% endblock %}
