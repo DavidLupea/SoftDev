@@ -1,0 +1,132 @@
+<!-- Welcome page user sees after authentication -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css"/>
+  <title>Welcome</title>
+</head>
+
+<nav class="navbar sticky-top navbar-light bg-light navbar-expand-sm">
+  <a class="navbar-brand" href="#">Friday Cat Damage</a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/traffic"> Traffic </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/weather">Weather</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/business_form">Businesses</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/auth">Log out</a>
+    </li>
+  </ul>
+</nav>
+
+<body style="background: url('https://www.xmple.com/wallpaper/beehive-honeycomb-grey-white-hexagon-1920x1080-c2-708090-ffffff-l2-4-48-a-30-f-5.svg') no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <h2> Getting started: </h2>
+        This website allows you to access information about your local area,
+        such as the weather conditions, traffic and any traffic incidends,
+        as well as listings of local businesses of your choosing and directions services. <br> <br>
+
+        <form action="/log_key">
+
+          {% if thanks %}
+            <font color = "blue"> {{thanks}}! </font> <br> <br>
+          {% endif %}
+
+          {% if error %}
+            <font color = "red"> {{error}} </font> <br> <br>
+          {% endif %}
+
+          {% if session['key'] %}
+            Change your API key:
+          {% else %}
+            A note: the use of Traffic and Business services will require the entry of
+            a MapQuest API key below <br>
+          {% endif %}
+
+          <input name="mapquest_key" type="text">
+          <input type="submit"> <br> <br>
+          For directions on how to obtain this key, navigate to our github repository's
+          <a href = "https://github.com/athompson00/Friday_Cat_Damage">README</a>
+        </form> <br>
+
+        <hr>
+
+        <h2> Traffic </h2>
+        Don't get stuck outside in traffic ever again with our traffic services! Click to
+        see areas of light and heavy traffic, as well as any incidents that have occured
+        in your area. <br> <br>
+        <a href = "/traffic"> Click here </a>
+        <hr>
+
+        <h2> Weather </h2>
+        Never get stuck in a downpour again! Always make sure you have the latest and
+        most accurate weather information by using our weather services. <br> <br>
+        <a href = "/weather"> Click here </a>
+        <hr>
+
+        <h2> Businesses </h2>
+        Ever wanted to go outside and try out something new? Ever wanted to go outside?
+        Probably not. Anyways, use our website to get listings of local businesses
+        in your area! <br> <br>
+        <a href = "/business_list"> Click here </a>
+        <hr>
+
+        {%if ip%}
+          <h2><font color="blue"> Based on our super secret methods, your ip is: {{ip}} <br> This is what we could gather </font></h2>
+        {%endif%}
+      </div>
+      <table class="table" style="position:center">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Data Point</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Country</th>
+            <td>{{data["country"]}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Region</th>
+            <td>{{data["regionName"]}}</td>
+          </tr>
+          <tr>
+            <th scope="row">City</th>
+            <td>{{data["city"]}}</td>
+          <tr>
+          </tr>
+            <th scope="row">Zip</th>
+            <td>{{data["zip"]}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Longitude</th>
+            <td>{{data["lon"]}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Latitude</th>
+            <td>{{data["lat"]}}</td>
+          </tr>
+          <tr>
+            <th scope="row">ISP</th>
+            <td>{{data["isp"]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

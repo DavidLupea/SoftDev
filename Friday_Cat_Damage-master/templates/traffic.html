@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <title>Traffic</title>
+</head>
+
+<nav class="navbar sticky-top navbar-light bg-light navbar-expand-sm">
+  <a class="navbar-brand" href="welcome">Friday Cat Damage</a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/traffic"> Traffic </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/weather">Weather</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/business_form">Businesses</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/auth">Log out</a>
+    </li>
+  </ul>
+</nav>
+
+<body
+  style="background: url('https://www.xmple.com/wallpaper/beehive-honeycomb-grey-white-hexagon-1920x1080-c2-708090-ffffff-l2-4-48-a-30-f-5.svg') no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div class="container">
+    <div class="card border-10 shadow my-5">
+      <div class="card-body p-5">
+        <h1> Traffic Flow in Your Area: </h1> <br><br>
+        <img src={{picRef}} width="100%">
+        <h2> Incidents: </h2>
+        {% for incident in incidents%}
+        <h3> {{incident["shortDesc"]}} </h3>
+        Severity: {{incident["severity"]}} <br>
+        (From <b>{{incident["startTime"]}}</b> to <b>{{incident["endTime"]}}</b>) <br> <br>
+        Full Description: {{incident["fullDesc"]}} <br> <br>
+        <hr>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
