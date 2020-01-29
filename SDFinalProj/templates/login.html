@@ -1,0 +1,35 @@
+{% extends 'templates.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-5">
+      <form action="/login" method="GET">
+        <h1 class="text-center">Mathamphetamine's Project Planner<br>Login Page</h1>
+        <br>
+        <div class="input-group flex-nowrap mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping">Username</span>
+          </div>
+          <input type="text" class="form-control" name="username" required>
+        </div>
+        <div class="input-group flex-nowrap mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping">Password</span>
+          </div>
+          <input type="password" class="form-control" name="password" required>
+        </div>
+        <input class="btn btn-success btn-block mb-2" type="Submit" value="Submit" required/>
+        {% with errors = get_flashed_messages() %}
+            <p class="text-danger">{{ errors[0] }}</p>
+        {% endwith %}
+        <a href="/register">Don't have an account?</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
