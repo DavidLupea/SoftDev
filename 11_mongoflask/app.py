@@ -7,7 +7,7 @@ try:
     client.drop_database('frootNinjas')
 except:
     pass
-    
+
 db = client.frootNinjas
 collection = db.meteors
 
