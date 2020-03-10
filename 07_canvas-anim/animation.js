@@ -3,7 +3,8 @@
 //K07 -- Canvas Animation
 //2020-02-12
 
-var animateButton = document.getElementById('animate');
+
+var animateButton = document.getElementById("I'm an animaniac");
 var stopButton = document.getElementById('stop');
 var canvas = document.getElementById('playground');
 const ctx = canvas.getContext('2d');
