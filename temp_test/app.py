@@ -27,8 +27,8 @@ def home():
 def name_to_mass():
     return render_template("form.html", ans = findMass(request.args["input"]))
 
-@app.route("/name_to_year")
-def name_to_year():
+@app.route("/name_to_time")
+def name_to_time():
     return render_template("form.html", ans = findYear(request.args["input"]))
 
 @app.route("/name_to_class")
@@ -43,8 +43,8 @@ def name_to_location():
 def id_to_mass():
     return render_template("form.html", ans = findMassbyID(request.args["input"]))
 
-@app.route("/id_to_year")
-def id_to_year():
+@app.route("/id_to_time")
+def id_to_time():
     return render_template("form.html", ans = findYearbyID(request.args["input"]))
 
 @app.route("/id_to_class")
@@ -69,7 +69,7 @@ def findClass(name):
     results = collection.find({"name" : name})
     for result in results:
         return result["recclass"]
-def findYear(name):
+def findTime(name):
     results = collection.find({"name" : name})
     for result in results:
         return result["year"]
@@ -86,11 +86,11 @@ def findClassbyID(id):
     results = collection.find({"id" : id})
     for result in results:
         return result["recclass"]
-def findYearbyID(id):
+def findTimebyID(id):
     results = collection.find({"id" : id})
     for result in results:
         return result["year"]
-        
+
 
 if __name__ == "__main__":
     app.debug = False
