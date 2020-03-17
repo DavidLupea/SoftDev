@@ -74,41 +74,23 @@ def findYear(name):
     for result in results:
         return result["year"]
 def findMassbyID(id):
-    try:
-        id = str(id)
-    except:
-        return "Integers only!!!"
     results = collection.find({"id" : id})
     for result in results:
         return result["mass"]
 def findLocationbyID(id):
-    try:
-        id = str(id)
-    except:
-        return "Integers only!!!"
     results = collection.find({"id": id})
     for result in results:
         ans = result["reclat"] + " " + result["reclong"]
         return ans
 def findClassbyID(id):
-    try:
-        id = str(id)
-    except:
-        return "Integers only!!!"
     results = collection.find({"id" : id})
     for result in results:
         return result["recclass"]
 def findYearbyID(id):
-    try:
-        id = str(id)
-    except:
-        return "Integers only!!!"
     results = collection.find({"id" : id})
     for result in results:
         return result["year"]
-
-
-
+        
 
 if __name__ == "__main__":
     app.debug = False
