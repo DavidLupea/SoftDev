@@ -23,9 +23,37 @@ app = Flask(__name__)
 def home():
     return render_template("form.html")
 
-@app.route("/auth")
-def authenticate():
-    return render_template("result.html", ans = "test1234")
+@app.route("/name_to_mass")
+def name_to_mass():
+    return render_template("form.html", ans = request.args)
+
+@app.route("/name_to_year")
+def name_to_year():
+    return render_template("form.html", ans = "test1234")
+
+@app.route("/name_to_class")
+def name_to_class():
+    return render_template("form.html", ans = "test1234")
+
+@app.route("/name_to_location")
+def name_to_location():
+    return render_template("form.html", ans = "test1234")
+
+@app.route("/id_to_mass")
+def id_to_mass():
+    return render_template("form.html", ans = "test1234")
+
+@app.route("/id_to_year")
+def id_to_year():
+    return render_template("form.html", ans = "test1234")
+
+@app.route("/id_to_class")
+def id_to_class():
+    return render_template("form.html", ans = "test1234")
+
+@app.route("/id_to_location")
+def id_to_location():
+    return render_template("form.html", ans = "test1234")
 
 
 if __name__ == "__main__":
