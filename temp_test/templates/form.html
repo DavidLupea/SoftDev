@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-	</head>
-	<body>
-		<form action = "/auth">
-			Name to mass<br>
-			<input type = "text" name = "test"<br>
-			<input type = "submit" name = "submit">
-		</form>
-	</body>
+		<head>
+				<title>Meteor querying</title>
+		</head>
+		<body>
+				{%if ans%}
+						<h2><font color="red"> {{ans}} </font></h2>
+				{%endif%}
+
+				<form action = "/name_to_mass">
+						Name to mass<br>
+						<input type = "text" name = "test"<br>
+						<input type = "submit" name = "submit">
+				</form>
+
+				<form action = "/name_to_location">
+						Name to Location<br>
+						<input type = "text" name = "test"<br>
+						<input type = "submit" name = "submit">
+				</form>
+
+				<form action = "/name_to_class">
+						Name to Class<br>
+						<input type = "text" name = "test"<br>
+						<input type = "submit" name = "submit">
+				</form>
+
+				<form action = "/name_to_year">
+						Name to Mass<br>
+						<input type = "text" name = "test"<br>
+						<input type = "submit" name = "submit">
+				</form>
+
+				<form action = "/id_to_massr">
+						ID to Mass<br>
+						<input type = "text" name = "test"<br>
+						<input type = "submit" name = "submit">
+				</form>
+
+				<form action = "/id_to_location">
+						ID to Location<br>
+						<input type = "text" name = "test"<br>
+						<input type = "submit" name = "submit">
+				</form>
+
+				<form action = "/id_to_class">
+						ID to Class<br>
+						<input type = "text" name = "test"<br>
+						<input type = "submit" name = "submit">
+				</form>
+
+				<form action = "/id_to_year">
+						ID to Year<br>
+						<input type = "text" name = "test"<br>
+						<input type = "submit" name = "submit">
+				</form>
+
+		</body>
 </html>
