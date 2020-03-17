@@ -75,3 +75,7 @@ def findYearbyID(id):
     results = collection.find({"id" : id})
     for result in results:
         print(result["year"])
+
+if __name__ == "__main__":
+    app.debug = True
+    app.run(host='0.0.0.0')
