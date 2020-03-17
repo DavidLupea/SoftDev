@@ -29,7 +29,7 @@ def name_to_mass():
 
 @app.route("/name_to_time")
 def name_to_time():
-    return render_template("form.html", ans = findYear(request.args["input"]))
+    return render_template("form.html", ans = findTime(request.args["input"]))
 
 @app.route("/name_to_class")
 def name_to_class():
@@ -45,7 +45,7 @@ def id_to_mass():
 
 @app.route("/id_to_time")
 def id_to_time():
-    return render_template("form.html", ans = findYearbyID(request.args["input"]))
+    return render_template("form.html", ans = findTimebyID(request.args["input"]))
 
 @app.route("/id_to_class")
 def id_to_class():
