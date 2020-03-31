@@ -15,21 +15,27 @@ var plot = function(e) {
 };
 
 var doot = function(e){
-	e.target.setAttribute("fill", "cyan");
-	e.target.addEventListener("click", moveRandom);
+    clickedDot=true;
+    console.log(this.getAttribute("id"));
+    if(this.getAttribute('fill') == 'blue'){
+        this.setAttribute('fill','cyan');
+    }
+    else if(this.getAttribute('fill') == 'cyan'){
+        moveRandom(e);
+        this.remove();
+    }
 };
 
 var moveRandom = function(e){
-      x=Math.floor((Math.random() * 500));
-      y=Math.floor((Math.random() * 500));
-      var dot = document.createElementNS("http://www.w3.org/2000/svg",'circle');
-      dot.setAttribute("cx",x);
-      dot.setAttribute("cy",y);
-      dot.setAttribute("r",20);
-      dot.setAttribute("fill","blue");
-      pic.removeChild(pic.lastChild); //Problematic line
-      pic.appendChild(dot);
-      dot.addEventListener('click',doot);
+    x=Math.floor((Math.random() * 500));
+    y=Math.floor((Math.random() * 500));
+    var dot = document.createElementNS("http://www.w3.org/2000/svg",'circle');
+    dot.setAttribute("cx",x);
+    dot.setAttribute("cy",y);
+    dot.setAttribute("r",20);
+    dot.setAttribute("fill","blue");
+    pic.appendChild(dot);
+    dot.addEventListener('click',doot);
 };
 
 var clear = function(e) {
