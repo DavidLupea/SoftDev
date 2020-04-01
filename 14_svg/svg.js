@@ -16,10 +16,6 @@ var plot = function(e) {
     }
 }
 
-var clear = function(e) {
-    return;
-}
-
 var move = function(e) {
     for(var i = 0; i < pic.children.length; i++){
         x =  parseInt(pic.children[i].getAttribute("cx"));
@@ -50,36 +46,36 @@ var clear = function(e) {
 };
 
 var xtra = function(e) {
-  for(var i = 0; i < pic.children.length; i++){
-      x =  parseInt(pic.children[i].getAttribute("cx"));
-      y =  parseInt(pic.children[i].getAttribute("cy"));
-      dx = parseInt(pic.children[i].getAttribute("dx"));
-      dy = parseInt(pic.children[i].getAttribute("dy"));
+    for(var i = 0; i < pic.children.length; i++){
+        x =  parseInt(pic.children[i].getAttribute("cx"));
+        y =  parseInt(pic.children[i].getAttribute("cy"));
+        dx = parseInt(pic.children[i].getAttribute("dx"));
+        dy = parseInt(pic.children[i].getAttribute("dy"));
 
-      pic.children[i].setAttribute("cx", x + dx);
-      pic.children[i].setAttribute("cy", y + dy);
+        pic.children[i].setAttribute("cx", x + dx);
+        pic.children[i].setAttribute("cy", y + dy);
 
-      if (x < 20 || x > pic.getAttribute("width") - 20) {
-          pic.children[i].setAttribute("dx", -dx);
-          pic.children[i].setAttribute("cx", x - dx);
-      }
-      if (y < 20 || y > pic.getAttribute("height") - 20) {
-          pic.children[i].setAttribute("dy", -dy);
-          pic.children[i].setAttribute("cy", y - dy);
-      }
+        if (x < 20 || x > pic.getAttribute("width") - 20) {
+            pic.children[i].setAttribute("dx", -dx);
+            pic.children[i].setAttribute("cx", x - dx);
+        }
+        if (y < 20 || y > pic.getAttribute("height") - 20) {
+            pic.children[i].setAttribute("dy", -dy);
+            pic.children[i].setAttribute("cy", y - dy);
+        }
 
-      for(var j = 0; j < pic.children.length; j++){
-          other_x = parseInt(pic.children[j].getAttribute("cx"));
-          other_y = parseInt(pic.children[j].getAttribute("cy"));
-          if (Math.sqrt(Math.pow(x-other_x, 2) + Math.pow(y - other_y, 2)) != 0 && Math.sqrt(Math.pow(x - other_x, 2)+Math.pow(y - other_y, 2)) < 40 && Math.abs(y - other_y) != 1 && Math.abs(x - other_x) != 1){
-              max = Math.max(i, j)
-              min = Math.min(i, j)
-              pic.children[max].remove()
-              pic.children[min].remove()
-          }
-      }
-  }
-  animation_id = window.requestAnimationFrame(xtra);
+        for(var j = 0; j < pic.children.length; j++){
+            other_x = parseInt(pic.children[j].getAttribute("cx"));
+            other_y = parseInt(pic.children[j].getAttribute("cy"));
+            if (Math.sqrt(Math.pow(x-other_x, 2) + Math.pow(y - other_y, 2)) != 0 && Math.sqrt(Math.pow(x - other_x, 2)+Math.pow(y - other_y, 2)) < 40 && Math.abs(y - other_y) != 1 && Math.abs(x - other_x) != 1){
+                max = Math.max(i, j)
+                min = Math.min(i, j)
+                pic.children[max].remove()
+                pic.children[min].remove()
+            }
+        }
+    }
+    animation_id = window.requestAnimationFrame(xtra);
 }
 
 button.addEventListener('click', clear);
