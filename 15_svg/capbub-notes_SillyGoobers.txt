@@ -1,0 +1,16 @@
+David Lupea and Matthew Chan
+SoftDev pd02
+Spring 2020
+SillyGoobers
+
+1. The HTML file renders a table with 2 rows and 3 columns, each one containing some sort of text. The JavaScript finds all <td> elements in the HTML file and makes it so that when any of them are clicked, the clicky() function is run. This function displays an alert to the user containging the inner html of the <td> element
+2. The HTML file renders a 2 by 3 table, each entry containing some sort of text. The JavaScript then finds different elements in the following order: finds all <td> elements, all <tr> elements and the first <table> element. To each of these, the JS then adds an event listener than when you click the element, it displays the inner HTML.
+Q1. Since the order that event listeners are added goes <td>, <tr>, <table>, I think that's the order of alerts.
+    This was PARTIALLY WRONG. The order in which events are added does not matter. So long as useCapture is not set to true, the JS uses "bubble" for event propogation, meaning it goes from the innermost element to the outermost element.
+3. The HTML file renders a 2 by 3 table, each entry containing some sort of text. The JavaScript then finds different elements in the following order: finds all <td> elements, all <tr> elements and the first <table> element. To each of these, it adds an event listener that displays the inner HTML when clicked. However, since the useCapture is set to true in the table's event listener, it will go from the "larger" element to the smaller element.
+Q1. If the line is uncommented, only the table's inner HTML will be shown.
+Q2. Since the useCapture is set to true, the order items are displayed in will be <table>, <tr>, <td>
+    This was WRONG. It displayed the table's inner HTML first, followed by the <td> and last the <tr>. I think if you would set the <tr> event listener's useCapture to true, our prediction would have been correct.
+4. It similarly renders the HTML page and attatches 3 click events to each item in the table.
+Q1. If the line is uncommented, only the table's inner HTML will be shown.
+Q2. Since all the useCapture's are set to true, the order the items are displayed in will be "big" to "small" or <table>, <tr>, <td>. This is independent of the order items are listed in.
