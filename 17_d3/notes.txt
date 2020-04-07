@@ -1,0 +1,5 @@
+Chaining Methods allows for easier application of two operations on a single element
+
+d3.scaleLinear() Changes the limit of the bar graph
+
+d3 also gives you more control over the data
