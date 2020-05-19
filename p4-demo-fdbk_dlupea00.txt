@@ -1,0 +1,202 @@
+~~~ SoftDev 2020 Spring D3 Demo Feedback ~~~
+by
+David Lupea
+
+
+team: TwoFortyNine
+-----------------------------------------------------------
+viewing time: 6:04
+notes:
+(+) I like the interesting take on COVID-19 data by analyzing the changes in sentiment over time.
+I found this creative approach to displaying coronavirus-related data fascinating.
+I also really enjoyed the paragraph-long descriptions to your analyses.
+(-) One possible downside is the way you pulled NYC subway data. It seems like you have a bunch of files on a website and I'm unsure if you have to download them every day or if there is some sort of API.
+(*) The numbers page is interesting. Does it get updated? Where is the data from?
+===========================================================
+
+
+team: The SIMPsons
+-----------------------------------------------------------
+viewing time: OWN TEAM
+notes: OWN TEAM
+(+) OWN TEAM
+(-) OWN TEAM
+(*) OWN TEAM
+===========================================================
+
+
+team: redesigned-telegram
+-----------------------------------------------------------
+viewing time: 6:14
+notes:
+(+) Very interesting take on COVID-19 economic impacts
+(-) Not a downside to the site but I'm curious sa to what the data sources look like.
+(*) I am wondering if there are any correlations between currency exchange rates and COVID cases in a country that should be noted.
+===========================================================
+
+
+team: Raduckal
+-----------------------------------------------------------
+viewing time: 6:18
+notes:
+(+) I like the different data visualizations, particularly the bubble map.
+I like the idea of visualizing census data since it is often difficult to read and it's nice to see it using JS.
+(-)
+(*) You did a lot with the data you had. I was wondering if there were other sources of data you could use.
+===========================================================
+
+
+team: potato_monkeys
+-----------------------------------------------------------
+viewing time: 6:25
+notes:
+(+) I liked your use of D3. The data was well visualized and methods well chosen.
+(-) Could not find video.
+Instructions for setup were wrong.
+I'm still unsure how you pull your data and how well it updates.
+(*)
+===========================================================
+
+
+team: peterPickledPeppers
+-----------------------------------------------------------
+viewing time: 6:40
+notes:
+(+) I liked the visualization techniques and how it directions attention at the magnitude of climate change.
+It was very interesting how you
+(-) It seems like you could have done more with the animations than drawing a line.
+(*) Not sure where you got data from or how you go about acquiring it.
+===========================================================
+
+
+team: Mykolyangelo
+-----------------------------------------------------------
+viewing time:
+notes: 6:52
+(+) I really like the data by country.
+The interactive globe is very well made and provides a lot of information. Maybe allow for zooming in and country borders
+The zoom in feature is vary informative
+I love the autofill
+(-) Allow for zooming out without going to next datatype
+(*) You did a lot with the (relatively) small amount of data you had. It would be interesting to do more like plotting yearly temperatures.
+===========================================================
+
+
+team: Mos and Friends
+-----------------------------------------------------------
+viewing time: 7:00
+notes:
+(+) I really like how you can compare different economic indicators over time. It is interesting to interact with the correlations.
+The idea of case studies is very interesting.
+(-) Maybe allow for graph smoothing by polling data less frequently as it is often quite jagged.
+(*)
+===========================================================
+
+
+team: Marshmallow Fluff
+-----------------------------------------------------------
+viewing time: 7:08
+notes:
+(+) I like the color scheme of the website.
+I like the bubble map of the US. It is an interesting take on COVID cases and shows hotspots.
+The simulation feature is an interesting take on the spread of COVID.
+(-) The country dropdown is quite long. Consider autofill or some other method of searching.
+(*)
+===========================================================
+
+
+team: Kudoclasm
+-----------------------------------------------------------
+viewing time: 7:19
+notes:
+(+) I liked the interesting method of visualizations
+Aesthetically pleasing website
+(-) Could not find video
+Launch codes are not avalible
+(*)
+===========================================================
+
+
+team: JEeBerS
+-----------------------------------------------------------
+viewing time: 7:30
+notes:
+(+) Very cool use of data and transitions between different visualizations. I particulaly like how you can choose different factors and see the rankings
+I like the circle chart with different factors and the trednds you can observe.
+(-) Website isn't very pleasing to look at
+Taxt on bar charts is hard to see
+(*) You did a lot with data from one source. It would be nice to expand and include other sources of information.
+===========================================================
+
+
+team: ihatequarantine
+-----------------------------------------------------------
+viewing time: 7:40
+notes:
+(+) Well designed Website
+Interesting data sources and animations with days
+It's interesting to see diseases passing eachother with the legend display
+(-) Getting data from a google doc and sending to to CSV doesn't seem very easy to pull and update.
+(*)
+===========================================================
+
+
+team: I am not ok with this
+-----------------------------------------------------------
+viewing time: 7:48
+notes:
+(+) Phenomenal physics and interesting application of mathematics.
+Well explained series and aesthetically pleasing website
+(-) Reading the formulas for sequences was a bit confusing. It would have been interesting to see the sequences in LaTeX or some other form of visualization.
+(*)
+===========================================================
+
+
+team: Four Cs
+-----------------------------------------------------------
+viewing time: 8:00
+notes:
+(+) Well designed website that is pleasing to look at
+Good use of different D3 formats of visualization.
+Really liked the comparisson page.
+(-)
+(*) It would hav been neater to have data in a database with one format.
+===========================================================
+
+
+team: Eclipse
+-----------------------------------------------------------
+viewing time: 8:06
+notes:
+(+) Really like the animations and sliders.
+Very in depth explanations and easy to use design.
+(-) Website could have been more aesthetically pleasing.
+Not entirely sure code review is necessary.
+(*)
+===========================================================
+
+
+team: brimless yankee
+-----------------------------------------------------------
+viewing time: 8:14
+notes:
+(+) Very well put together video.
+Easy to look at Website.
+Very creative visualizations for data and comparissons.
+I really enjoyed looking at the correlations between different metrics.
+(-)
+(*)
+===========================================================
+
+
+team: Bagel Pizza
+-----------------------------------------------------------
+viewing time: 8:25
+notes:
+(+) Very nice looking website
+Creative use of D3 visualizations
+Liked the zoom feature
+Lots of options and customizable features.
+(-) It would be nice to see more animations
+(*)
+===========================================================
